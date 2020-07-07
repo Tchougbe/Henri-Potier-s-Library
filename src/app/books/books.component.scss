@@ -1,0 +1,28 @@
+h2 span {
+  font-size: 12px;
+}
+
+.book-list {
+  margin-top: 45px;
+}
+
+.btn-light:hover {
+  background-color: #70A9A1;
+}
+
+.books-content {
+  margin-top: 115px;
+}
+
+.book-card {
+  display: flex;
+  justify-content: center;
+}
+
+.book-info, .book-price {
+  align-self: center;
+}
+
+.btn-light:focus {
+  outline-color: transparent;
+}

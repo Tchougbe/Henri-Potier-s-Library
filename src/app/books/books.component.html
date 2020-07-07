@@ -1,0 +1,48 @@
+<div class="container books-content">
+  <p class="text-center mtb-15 subtitle">
+    <fa-icon class="color-third" [icon]="faQuoteLeft"></fa-icon>
+    Il était une fois, une collection de cinq livres racontant les histoires d’un formidable héro nommé Henri Potier.
+  <br>
+    Tous les enfants du monde trouvaient les histoires de cet adolescent fantastiques. Voici ces oeuvres
+    <fa-icon class="color-third" [icon]="faQuoteRight"></fa-icon>
+  </p>
+  <div toastContainer></div>
+  <div class="book-list">
+    <div class="form-input">
+      <input type="search" class="form-control ds-input" id="search-input" placeholder="Rechercher..."
+             (keyup)="searchBook($event)" style="position: relative; vertical-align: top;"
+             [(ngModel)]="search" >
+    </div>
+    <div *ngIf="search.length === 0">
+      <div class="row col-lg-12 mtb-15 book-card" *ngFor="let book of books">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <img class="img-responsive" [src]="book.cover">
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 book-info">
+          <h2 class="color-third">{{book.title}}</h2>
+          <span *ngFor="let data of book.synopsis">{{data}}</span>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 text-center book-price">
+          <h3 class="color-third">{{book.price}}€</h3>
+          <button class="btn-group-lg btn btn-light" (click)="addItemToCart(book)"> Acheter </button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="search.length > 0">
+      <h3>Résultats</h3>
+      <div class="row col-lg-12 mtb-15 book-card" *ngFor="let item of searchResult">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <img class="img-responsive" [src]="item.cover">
+        </div>
+        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 book-info">
+          <h2 class="color-third">{{item.title}}</h2>
+          <span *ngFor="let data of item.synopsis">{{data}}</span>
+        </div>
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 text-center book-price">
+          <h3 class="color-third">{{item.price}}€</h3>
+          <button class="btn-group-lg btn btn-light" (click)="addItemToCart(item)"> Acheter </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
