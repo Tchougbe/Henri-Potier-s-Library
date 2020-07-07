@@ -1,8 +1,17 @@
-
-
 .header {
   height: 105px;
   background-color: #f2f4f6;
   text-align: center;
   font-size: xx-large;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
 }
+
+.header-content {
+  height: inherit;
+  line-height: 105px;
+}
+

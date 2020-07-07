@@ -1,12 +1,14 @@
 import {Injectable} from '@angular/core';
 import {Book} from './book.model';
 import {HttpClient} from '@angular/common/http';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  content: Book[] = [];
+  content = [];
+  bookAdded = new Subject<number>();
   constructor(private http: HttpClient) { }
 
   addItem(item: Book) {

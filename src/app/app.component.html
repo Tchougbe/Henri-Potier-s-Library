@@ -1,6 +1,15 @@
-<div class="header container-fluid">
-  <button [routerLink]="'/'"> Accueil </button>
-  Henri Pottier's Library
-  <button [routerLink]="'/cart'"> Panier </button>
+<div class="header container-fluid navbar-collapse" ngbCollapse>
+  <div class="header-content col-lg-12 col-md-12 col-xs-12">
+    <a class="text-center col-lg-2 col-md-2 col-xs-2" [routerLink]="'/'">
+      <h1>Accueil</h1>
+    </a>
+    <h1 class="title text-center col-lg-8 col-md-8 col-xs-8 color-secondary">
+      <fa-icon [icon]="faBook"></fa-icon> Librairie Henri Potier
+    </h1>
+    <a class="text-right col-lg-2 col-md-2 col-xs-2 color-secondary" [routerLink]="'/cart'">
+      <fa-icon [icon]="faShoppingCart"></fa-icon><span>({{nbBooksIntoCart}})</span>
+    </a>
+  </div>
 </div>
+
 <router-outlet></router-outlet>

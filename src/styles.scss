@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import '~ngx-toastr/toastr.css';
+/* Font Family */
+html, body {
+  font-family: 'Amiri', sans-serif;
+}
+
+$color-primary:#0B2027;
+$color-secondary:#40798C;
+$color-third:#70A9A1;
+$color-grey: #E5EBEA;
+
+.title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+
+span, .text-body{
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 32px;
+  color: $color-primary;
+}
+
+h3 {
+  font-size: 24px;
+  color: $color-primary;
+}
+
+h4 {
+  font-size: 18px;
+  color: $color-primary;
+
+}
+.underline {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.color-primary {
+  color: #0B2027 !important;
+}
+
+.color-secondary {
+  color: #40798C !important;
+}
+
+.color-third {
+  color: #70A9A1 !important;
+}
+
+.toast-success {
+  background-color: #40798C !important;
+}
+
+.mtb-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}

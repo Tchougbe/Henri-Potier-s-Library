@@ -3,5 +3,5 @@ export interface Book {
   title: string,
   price: number,
   cover: string,
-  synopsis: [string]
+  synopsis: string[]
 }
